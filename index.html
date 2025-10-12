@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-inter: "Inter", sans-serif;
+        --color-primary: #463ADD;
+        --color-secondary: #EEF1FF;
+
+        --color-background: #FCFDFF;
+        --color-white: #FFFFFF;
+        --color-gen: #F0F0F3;
+        --color-texte: #1E1F24;
+
+        --color-lightgrey: #E0E1E6;
+        --color-grey: #81828C;
+
+        --color-badgeLightgrey: #F9F9FB;
+        --color-badgeGrey: #CDCED6;
+
+        --color-pink: #FF00FB;
+
+      }
+    </style>
+  </head>
+
+  <body class="bg-background font-sans bg-gen min-h-screen flex flex-col md:flex-row">
+
+    <!-- Header mobile -->
+    <div class="md:hidden flex items-center justify-center h-12 bg-secondary">
+      <div class="text-2xl font-black font-inter bg-gradient-to-r from-primary to-pink text-transparent bg-clip-text animate-bounce">
+        TAILWIND
+      </div>
+    </div>
+
+    <!-- Sidebar ordi -->
+    <div class="hidden md:flex bg-secondary w-80 h-screen flex-col items-center pt-7 gap-4">
+      <div
+        class="w-56 h-8 text-4xl leading-5 tracking-wider font-black font-inter bg-gradient-to-r from-primary to-pink
+               text-transparent bg-clip-text flex items-center animate-bounce">
+        TAILWIND
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="flex-1 flex flex-col">
+      <nav class="h-16 w-full bg-gen border-b border-gray-300 p-4 flex items-center justify-between sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-black font-sans font-semibold text-2xl leading-8 tracking-tight w-36 h-8">
+          My Catalogs
+        </h3>
+        <!-- Bouton -->
+        <button class="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-primary text-white text-sm font-medium hover:bg-secondary hover:text-primary">
+          <p class="inline-flex items-center justify-center size-4 rounded-sm border border-background text-xs leading-none">+</p>
+          <p >Create catalog</p>
+        </button>
+      </nav>
+
+      <!-- Grille des catalogues -->
+      <main class="flex flex-col w-full max-w-screen-xl mx-auto px-4 pb-8 gap-4">
+        <div class="flex items-center gap-2 h-7 w-full"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+
+          <!-- Catalogue 1 -->
+          <div class="w-full h-auto rounded-lg bg-white border border-lightgrey p-2.5 gap-4 flex flex-col">
+            <div class="flex flex-col w-full min-h-24 gap-3">
+              <div class="flex items-center justify-between w-full px-2 py-1 gap-3 h-auto">
+                <div class="font-inter font-medium text-xs leading-4 text-texte w-20 h-4">
+                  Create catalog
+                </div>
+              </div>
+
+              <div class="flex flex-row w-full min-h-10 pt-1 pr-2 pb-1 pl-2 gap-1">
+                <p class="w-full font-inter font-normal text-xs leading-4 tracking-normal text-grey">
+                  Create new catalog to add products and generate content.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bouton catalogue 1 -->
+            <button class="flex items-center justify-center w-full min-h-10 px-4 py-2 gap-2 rounded-md bg-primary font-medium hover:bg-secondary hover:text-primary">
+              <div class="flex items-center justify-center gap-2 text-white hover:text-primary">
+                <div class="w-4 h-4 flex items-center justify-center rounded-sm font-medium border border-background text-xs leading-none hover:text-primary">+</div>
+                <div class="font-inter font-medium text-sm leading-6 tracking-normal hover-text-primary">Create catalog</div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Catalogue 2 -->
+          <div class="flex flex-col w-full h-auto rounded-lg border border-lightgrey bg-white p-3 gap-2">
+            <div class="flex flex-row items-center justify-between w-full min-h-14 gap-4">
+              <p class="font-inter font-semibold text-lg leading-7 text-black">
+                Christmas 2024
+              </p>
+              <button class="flex items-center justify-center w-10 h-10 p-3 text-grey">
+                <div class="w-4 h-4 flex items-center justify-center leading-none">... </div>
+              </button>
+            </div>
+
+            <!-- Liste catégories -->
+            <div class="flex flex-row flex-wrap w-full py-1 gap-2">
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">Sneakers</p>
+              </div>
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">boots</p>
+              </div>
+            </div>
+
+            <div class="flex flex-row w-full min-h-6 py-1 gap-1">
+              <p class="font-inter font-normal text-xs leading-4 text-gray-500">Created on</p>
+              <p class="font-inter font-normal text-xs leading-4 text-gray-500 w-14">12.27.2024</p>
+            </div>
+
+            <p class="text-xs font-medium">254 products</p>
+          </div>
+
+          <!-- Catalogue 3 -->
+          <div class="flex flex-col w-full h-auto rounded-lg border border-lightgrey bg-white p-3 gap-2">
+            <div class="relative flex w-full gap-2.5 flex-col sm:flex-row sm:items-start sm:justify-between">
+              <p class="flex-1 min-w-0 font-inter font-semibold text-lg leading-7 text-black break-words line-clamp-2">
+                A very big title for a catalog with many thing
+              </p>
+              <button class="flex items-center justify-center w-10 h-10 p-3 text-grey shrink-0 absolute right-2 top-2 sm:static sm:self-auto">
+                <div class="w-4 h-4 flex items-center justify-center leading-none">... </div>
+              </button>
+            </div>
+
+            <!-- Liste catégories -->
+            <div class="flex flex-row flex-wrap w-full py-1 gap-2">
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">Sneakers</p>
+              </div>
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">boots</p>
+              </div>
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">Belt</p>
+              </div>
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">Socks</p>
+              </div>
+              <div class="flex items-center justify-center h-5 px-2.5 py-0.5 gap-1.5 border border-grey rounded bg-lightgrey">
+                <p class="font-inter font-normal text-xs leading-4 text-gray-900">+3</p>
+              </div>
+            </div>
+
+            <div class="flex flex-row w-full min-h-6 py-1 gap-1">
+              <p class="font-inter font-normal text-xs leading-4 text-gray-500">Created on</p>
+              <p class="font-inter font-normal text-xs leading-4 text-gray-500 w-14">12.27.2024</p>
+            </div>
+
+            <p class="text-xs font-medium">254 products</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
