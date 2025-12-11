@@ -1,4 +1,4 @@
-# Projet Tailwind CSS – Yasmine
+# Projet-TailWind-CSS Yasmine
 
 Ce projet a été réalisé durant ma 2ᵉ année à l’**IIM Digital School**, au sein du parcours **Coding & Digital Innovation**.  
 L’objectif était de **reproduire au plus près une maquette Figma** en utilisant **Tailwind CSS**.
